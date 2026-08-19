@@ -209,3 +209,34 @@ v3 剩下的 44.4 mm² 是掛鉤舌片跨過 3mm 溝槽的短橋接，可以橋�
 - 重啟 Bambu Studio 讓 `TV喇叭籃 0.20 支撐` 出現在選單
 - 切片 v3 確認支撐只長在兩個下折勾底下，記錄實際克數與時間
 - 實際列印驗證
+
+---
+
+## Review — 倉庫整理與公開
+
+### 做了什麼
+
+1. **清掉舊版產物**：刪除 v1/v2 的 STL、verify、screenshots（各 6 張），
+   以及 Bambu Studio CLI 亂丟的 `result.json` 與 FreeCAD 的 `.FCBak`。
+   設計歷程保留在 `CONTEXT.md` §7 與本檔，只是檔案不留。
+2. **`HANDOFF.md` 併入 `CONTEXT.md`**：原本兩份交接文件會分岔。
+   實測值表、照片判讀結論、設計決策與理由、主要尺寸都搬進 CONTEXT 的
+   §2～§4，HANDOFF.md 刪除，`CLAUDE.md` / `AGENTS.md` 的指向一併改掉。
+3. **`.gitignore`**：排除 `*.FCBak`、`*.FCStd1`、`__pycache__/`、
+   `result.json`、OS 垃圾檔。
+4. **`README.md`**：對外說明——解決什麼問題、適用尺寸、直接印要注意什麼
+   （方向 + 支撐必開）、改尺寸怎麼重跑。
+5. **公開倉庫**：<https://github.com/RX5950XT/3DP-TV-SpeakerHanger>
+   （main 分支，17 個檔案）。
+
+### 發佈前的處理
+
+- 移除 `HANDOFF.md` 裡指向使用者手機備份磁碟的絕對路徑（照片本來就不在倉庫內）
+- `CONTEXT.md` 的 Bambu Studio user_id 改成 `<user_id>` 佔位，附上怎麼從
+  `BambuStudio.conf` 的 `app.preset_folder` 查
+- git identity 用的是 GitHub noreply email，沒有外洩真實信箱
+
+### 未決
+
+- **沒有加 LICENSE**。README 原本寫了 MIT，但沒經使用者同意就掛授權不妥，已拿掉。
+  公開倉庫沒有 LICENSE = 保留所有權利，別人不能合法改作。要開放的話補一個檔即可。

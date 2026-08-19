@@ -1,6 +1,7 @@
 # CONTEXT — 電視壁掛架掛勾喇叭籃（開發紀錄／交接文件）
 
 > 接手先讀這份，讀完就能繼續。專案通用規範見 `CLAUDE.md`。
+> 公開倉庫：<https://github.com/RX5950XT/3DP-TV-SpeakerHanger>
 
 ---
 
