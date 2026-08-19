@@ -1,0 +1,15 @@
+# FreeCAD
+*.FCBak
+*.FCStd1
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Bambu Studio CLI 會在 cwd 丟這個
+result.json
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
