@@ -23,7 +23,7 @@
 | 喇叭 | 長 200 × 深 50 × 高 70 mm（HUAWEI 藍芽音箱含矽膠套） |
 
 **尺寸不同也能用**——`cad/build_basket.py` 是參數化腳本，改開頭參數區重跑即可，
-不必懂裡面的幾何。對照表見 [CONTEXT.md §9 調整旋鈕](CONTEXT.md#9-調整旋鈕改需求時只動-cadbuild_basketpy-參數區)。
+不必懂裡面的幾何。對照表見 [tasks/todo.md 調整旋鈕](tasks/todo.md#調整旋鈕)。
 
 ## 成品規格
 
@@ -40,7 +40,7 @@
   用樹狀支撐；全模型真正需要支撐的只有 22.2 mm²
 - 建議 PETG（韌性好，掛載件不易脆斷），0.2 層高，3 圈牆，12% gyroid，5mm brim
 
-Bambu Studio A1 的完整參數與逐項理由見 [CONTEXT.md §8](CONTEXT.md#8-切片參數bambu-studio)。
+Bambu Studio A1 的完整參數與逐項理由見 [tasks/todo.md 切片參數](tasks/todo.md#切片參數)。
 
 ## 改尺寸重新產生模型
 
@@ -73,5 +73,5 @@ python cad\render_views.py v3
 | `cad/TV_Speaker_Basket_v3.stl` | 列印檔 |
 | `cad/TV_Speaker_Basket.FCStd` | FreeCAD 工作檔 |
 | `cad/verify_v3.txt` | 幾何驗證報表 |
-| `CONTEXT.md` | 完整開發紀錄、設計理由、切片參數、踩過的雷 |
+| `tasks/todo.md` | 交接：現況、設計理由、切片參數、踩過的雷、待辦 |
 | `CLAUDE.md` / `AGENTS.md` | 給 AI agent 接手用的專案規範 |

@@ -1,7 +1,7 @@
 # CLAUDE.md — 專案規範
 
 電視壁掛架掛勾喇叭籃（FreeCAD 參數化 CSG 建模 → FDM 3D 列印）。
-開發紀錄、設計理由與現況見 `CONTEXT.md`；對外說明見 `README.md`。
+交接（現況、設計理由、切片參數、待辦）見 `tasks/todo.md`（保持 ≤100 行）；對外說明見 `README.md`。
 本檔只寫本專案特有規範，通用工作原則見 `~/.claude/CLAUDE.md`。
 
 ## 禁止事項
@@ -48,7 +48,7 @@
 Get-Content cad\verify_v<n>.txt
 # 4) 出目視驗證圖
 python cad\render_views.py v<n>
-# 5) 更新 CONTEXT.md 建模日誌（量測結果表格）
+# 5) 更新 tasks/todo.md 現況（≤100 行，只留結論）
 ```
 
 ## 驗收標準（全過才算完成）
@@ -58,7 +58,7 @@ python cad\render_views.py v<n>
 - BoundBox 與參數推導值誤差 < 0.01mm
 - 6 張 `cad/screenshots/v<n>_*.png` 目視無異常
 - 朝下面清單裡的 ★需支撐 只有兩個下折勾底面（Z=−12，共 22.2 mm²），多出別的就是改壞了
-- `CONTEXT.md` 建模日誌已補當次量測表格
+- `tasks/todo.md` 現況已更新為當次結果
 
 ## CSG 建模守則
 
@@ -70,7 +70,7 @@ python cad\render_views.py v<n>
 ## 列印規範
 
 - **切片預設**：Bambu Studio 使用者預設 `TV喇叭籃 0.20 支撐`
-  （A1 0.4 噴頭 / PETG Basic，繼承 `0.20mm Standard @BBL A1`）。逐項理由見 `CONTEXT.md` §6。
+  （A1 0.4 噴頭 / PETG Basic，繼承 `0.20mm Standard @BBL A1`）。逐項理由見 `tasks/todo.md` 切片參數。
 - **`enable_support` 必開**：兩個下折勾底面在 Z=−12，是離平台 102mm 的完全懸空孤島，
   不支撐印不出來。用 `tree(auto)`，grid 柱在這個高度會被撞倒。
   這是全模型唯一的真懸空（22.2 mm²）；改幾何後用

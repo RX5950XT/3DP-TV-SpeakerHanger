@@ -4,5 +4,5 @@
 
 刻意不複製內容，避免兩份文件分岔。修改規範時只改 `CLAUDE.md`。
 
-- 開發紀錄／現況：[CONTEXT.md](CONTEXT.md)
+- 交接／現況：[tasks/todo.md](tasks/todo.md)
 - 對外說明：[README.md](README.md)
